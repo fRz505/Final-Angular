@@ -22,9 +22,6 @@ export class AdminGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    //obtengo el usuario autenticado para conocer sus propiedades
-    // y en el map verifico su rol
-    // (la interface de Usuario se encuentra en Index.ts)
     return this.authService.obtenerUsuarioAutenticado().pipe(
       map((usuarioAutenticado) => {
         if (usuarioAutenticado?.role !== 'admin') {
@@ -35,6 +32,6 @@ export class AdminGuard implements CanActivate {
         }
       })
     );
-    // return true;
+
   }
 }
