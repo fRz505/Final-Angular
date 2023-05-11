@@ -1,7 +1,6 @@
 <mat-drawer-container class="example-container" autosize>
     <!-- SIDEBAR -->
     <mat-drawer [opened]="true" #drawer class="example-sidenav" mode="side">
-      <img width="50" height="50" src="../../assets/img/avatar.svg" />
   
       <p>{{ (authUser$ | async)?.email }}</p>
   
@@ -13,9 +12,9 @@
       </mat-nav-list>
     </mat-drawer>
   
-    <!-- MI WRAPPER  -->
+
     <div class="example-sidenav-content">
-      <!-- TOOLBAR  -->
+
       <mat-toolbar color="primary">
         <div class="flex justify-content-between">
           <div>
@@ -34,7 +33,6 @@
               class="example-icon favorite-icon"
               aria-label="Example icon-button with heart icon"
             >
-              <mat-icon>favorite</mat-icon>
             </button>
           </div>
           <p>{{ (authUser$ | async)?.nombre }}</p>
